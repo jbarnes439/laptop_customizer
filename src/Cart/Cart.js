@@ -6,6 +6,8 @@ import Summary from '../Summary/Summary'
 class Cart extends Component {
 
   render() {
+    //The commented out code was moved to the Summary component !! -> check it out!
+    // we were able to remove the 'const summary' and returned Object.keys... ect...
 
     // const summary = Object.keys(this.props.selected).map((feature, idx) => {
     //   const featureHash = feature + '-' + idx;
