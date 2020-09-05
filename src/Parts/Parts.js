@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FEATURES from '../index';
 import slugify from 'slugify';
+import Part from '../Part/Part';
 
 export default function Parts(props) {
 
@@ -26,12 +27,17 @@ export default function Parts(props) {
         );
       });
       return (
-        <fieldset className="feature" key={featureHash}>
-          <legend className="feature__name">
-            <h3>{feature}</h3>
-          </legend>
-          {options}
-        </fieldset>
+        <Part 
+        key={featureHash}
+        featureHash={featureHash}
+        feature={feature}
+        options={options}/>
+        // <fieldset className="feature" key={featureHash}>
+        //   <legend className="feature__name">
+        //     <h3>{feature}</h3>
+        //   </legend>
+        //   {options}
+        // </fieldset>
       );
 
     })
